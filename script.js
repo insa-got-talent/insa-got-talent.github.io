@@ -3,7 +3,6 @@ async function fetchCounter() {
 	const counterEl = document.querySelector('.counter-value');
 	if (!counterEl) return;
 
-	counterEl.textContent = '...';
 	counterEl.classList.add('loading');
 
 	try {
