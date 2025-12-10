@@ -64,4 +64,6 @@ function bindCounterButtons() {
 document.addEventListener('DOMContentLoaded', () => {
 	bindCounterButtons();
 	fetchCounter();
+
+	setInterval(fetchCounter, 2000);
 });
