@@ -1,0 +1,184 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+:root {
+    --curtain-main: 179, 0, 0;
+    --curtain-bright: 209, 0, 0;
+    --curtain-dark: 140, 0, 0;
+    --balance-main: 139, 0, 0;
+    --balance-shadow: 102, 0, 0;
+    --balance-bright: 140, 0, 0;
+    --balance-mid: 120, 0, 0;
+    --balance-dark: 90, 0, 0;
+}
+
+#stage {
+    position: fixed;
+    inset: 0;
+    height: 100%;
+    background: transparent;
+    z-index: 50;
+    pointer-events: none;
+    -webkit-animation: fadeOut 6s ease forwards 6s;
+            animation: fadeOut 6s ease forwards 6s;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+.curtain {
+    position: absolute;
+    background: -o-linear-gradient(right, rgba(0, 0, 0, 0), rgb(var(--curtain-main)), rgba(var(--curtain-main), 0.95), rgb(var(--curtain-main))), -o-linear-gradient(right, rgba(var(--curtain-bright), 0.98), rgba(var(--curtain-main), 0.97), rgba(var(--curtain-dark), 0.95));
+    background: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0)), color-stop(rgb(var(--curtain-main))), color-stop(rgba(var(--curtain-main), 0.95)), to(rgb(var(--curtain-main)))), -webkit-gradient(linear, right top, left top, from(rgba(var(--curtain-bright), 0.98)), color-stop(rgba(var(--curtain-main), 0.97)), to(rgba(var(--curtain-dark), 0.95)));
+    background: linear-gradient(to left, rgba(0, 0, 0, 0), rgb(var(--curtain-main)), rgba(var(--curtain-main), 0.95), rgb(var(--curtain-main))), linear-gradient(to left, rgba(var(--curtain-bright), 0.98), rgba(var(--curtain-main), 0.97), rgba(var(--curtain-dark), 0.95));
+    background-size: 67px 67px, 53px 53px;
+    width: 60%;
+    height: 100%;
+    margin-left: -10%;
+    transition: width 4s, -webkit-transform 2s;
+}
+
+.balance {
+    position: absolute;
+    background: -o-linear-gradient(right, rgba(0, 0, 0, 0), rgb(var(--balance-main)), rgba(var(--balance-shadow), 0.96), rgb(var(--balance-main))), -o-linear-gradient(right, rgba(var(--balance-bright), 0.98), rgba(var(--balance-mid), 0.97), rgba(var(--balance-dark), 0.95));
+    background: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0)), color-stop(rgb(var(--balance-main))), color-stop(rgba(var(--balance-shadow), 0.96)), to(rgb(var(--balance-main)))), -webkit-gradient(linear, right top, left top, from(rgba(var(--balance-bright), 0.98)), color-stop(rgba(var(--balance-mid), 0.97)), to(rgba(var(--balance-dark), 0.95)));
+    background: linear-gradient(to left, rgba(0, 0, 0, 0), rgb(var(--balance-main)), rgba(var(--balance-shadow), 0.96), rgb(var(--balance-main))), linear-gradient(to left, rgba(var(--balance-bright), 0.98), rgba(var(--balance-mid), 0.97), rgba(var(--balance-dark), 0.95));
+    background-size: 67px 67px, 53px 53px;
+    background-size: 79px 79px, 61px 61px;
+    width: 100%;
+    height: 15%;
+    -webkit-transition: height 2s 1s;
+    -o-transition: height 2s 1s;
+    transition: height 2s 1s;
+}
+
+#curtain-right {
+    right: 0;
+    margin-right: -10%;
+    -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+    -moz-transform: matrix(-1, 0, 0, 1, 0, 0);
+    -ms-transform: matrix(-1, 0, 0, 1, 0, 0);
+    -o-transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.spotlight {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 200;
+    background: -o-radial-gradient(circle, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3) 60%), -o-radial-gradient(circle, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) 40%);
+    background: radial-gradient(circle, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3) 60%), radial-gradient(circle, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) 40%);
+    background-attachment: fixed;
+    background-position: -80px 0, 80px 0;
+    pointer-events: none;
+}
+
+#stage #curtain-left {
+    -webkit-animation: curtain-left-open 4s ease forwards 5s;
+            animation: curtain-left-open 4s ease forwards 5s;
+}
+
+#stage #curtain-right {
+    -webkit-animation: curtain-right-open 4s ease forwards 5s;
+            animation: curtain-right-open 4s ease forwards 5s;
+}
+
+#stage .balance {
+    -webkit-animation: balance-lift 4s ease forwards 5s;
+            animation: balance-lift 4s ease forwards 5s;
+}
+
+@-webkit-keyframes curtain-left-open {
+    to {
+        width: 15px;
+        -webkit-transform: matrix(1, 0, -0.2, 1, 0, 0);
+        -ms-transform: matrix(1, 0, -0.2, 1, 0, 0);
+        transform: matrix(1, 0, -0.2, 1, 0, 0);
+    }
+}
+
+@keyframes curtain-left-open {
+    to {
+        width: 15px;
+        -webkit-transform: matrix(1, 0, -0.2, 1, 0, 0);
+        -ms-transform: matrix(1, 0, -0.2, 1, 0, 0);
+        transform: matrix(1, 0, -0.2, 1, 0, 0);
+    }
+}
+
+@-webkit-keyframes curtain-right-open {
+    to {
+        width: 15px;
+        -webkit-transform: matrix(-1, 0, 0.2, 1, 0, 0);
+        -ms-transform: matrix(-1, 0, 0.2, 1, 0, 0);
+        transform: matrix(-1, 0, 0.2, 1, 0, 0);
+    }
+}
+
+@keyframes curtain-right-open {
+    to {
+        width: 15px;
+        -webkit-transform: matrix(-1, 0, 0.2, 1, 0, 0);
+        -ms-transform: matrix(-1, 0, 0.2, 1, 0, 0);
+        transform: matrix(-1, 0, 0.2, 1, 0, 0);
+    }
+}
+
+@-webkit-keyframes balance-lift {
+    to {
+        height: 5px;
+    }
+}
+
+@keyframes balance-lift {
+    to {
+        height: 5px;
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+    .curtain {
+        width: 80vw;
+        margin-left: -30vw;
+        background-size: 44px 44px, 34px 34px;
+    }
+
+    #curtain-right {
+        margin-right: -30vw;
+    }
+
+    .balance {
+        height: 12%;
+        background-size: 60px 60px, 46px 46px;
+    }
+}

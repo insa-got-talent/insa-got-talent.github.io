@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="curtains.css">
+</head>
+
+<body>
+    <div class="header">
+        <span class="line1">Le <img class="geiser" src="./images/geiser.png" alt="GEISER"> présente</span>
+        <span class="line2"><img class="got-talent" src="./images/logo.png" alt="INSA Got Talent"></span>
+    </div>
+
+    <div id="stage">
+        <div id="curtain-left" class="curtain"></div>
+        <div id="curtain-right" class="curtain"></div>
+        <div id="balance" class="balance"></div>
+        <div class="spotlight"></div>
+    </div>
+
+
+    <div class="content">
+        
+        <section class="event-info">
+            <p class="event-date">18 décembre 2025</p>
+            <p class="event-note">Rendez-vous au PK à partir de 19h30 pour ✨ une soirée exceptionnelle ✨</p>
+            <p class="event-copy">Que tu sois là pour briller sous les projecteurs ou encourager tes potes, l'ambiance sera au top ! 🎤</p>
+            <p class="event-copy">Boissons et snacks seront disponibles sur place.</p>
+        </section>
+        
+        <section class="counter">
+            <p class="counter-label">Participants</p>
+            <p class="counter-value" aria-live="polite">123</p>
+        </section>
+
+        <section class="actions">
+            <div class="action">
+                <button id="buzzer" class="primary" data-increment="counter">Je viens</button>
+            </div>
+            <div class="action">
+                <button data-href="https://forms.gle/Q6FVsFgM8Jjad6nA6" id="buzzer" class="secondary" data-increment="counter">Je m'inscris</button>
+            </div>
+        </section>
+
+        <section class="prizes">
+            <p class="prize-note">Les lots à gagner :</p>
+            <div class="prize-card second">
+                <span class="prize-badge">#2</span>
+                <img src="./images/cinema.webp" alt="Places de cinéma">
+                <p>Deux places de cinéma</p>
+            </div>
+            <div class="prize-card first">
+                <span class="prize-badge">#1</span>
+                <img src="./images/caliceo-toulouse.jpg" alt="Journée au Calicéo de Toulouse">
+                <p>Une journée au Calicéo de Toulouse</p>
+            </div>
+            <div class="prize-card third">
+                <span class="prize-badge">#3</span>
+                <img src="./images/livre.jpg" alt="Livre">
+                <p>Un livre</p>
+            </div>
+        </section>
+    </div>
+
+    <footer class="site-footer">
+        <p>© 2025 INSA Got Talent · Rendez-vous au PK dès 19h30 · Boissons et snacks sur place · Développé par <a href="https://romain.bongibau.lt" target="_blank">Bongibault Romain</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
